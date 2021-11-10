@@ -36,6 +36,7 @@ namespace ProductApps
                 totalPaymentTextBlock.Text = Convert.ToString(cProduct.TotalPayment);
                 totalChargeWithDeliveryTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25.00m);
                 totalChargeAfterWrappingTextBlock.Text = Convert.ToString(cProduct.TotalPayment + 25.00m + 5.00m);
+                totalChargeAfterGSTTextBlock.Text = Convert.ToString((cProduct.TotalPayment + 25.00m + 5.00m) * 1.1m);
             }
             catch (FormatException)
             {
@@ -51,7 +52,7 @@ namespace ProductApps
             totalPaymentTextBlock.Text = "";
             totalChargeWithDeliveryTextBlock.Text = "";
             totalChargeAfterWrappingTextBlock.Text = "";
-
+            totalChargeAfterGSTTextBlock.Text = "";
         }
 
         private void closeButton_Click(object sender, RoutedEventArgs e)
